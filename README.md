@@ -5,6 +5,7 @@
 * cmake
 * libssl-dev
 * uuid-dev
+* swig
 
 # Настройка
 ### Настройка сборки
