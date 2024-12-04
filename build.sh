@@ -13,6 +13,7 @@ cd ../..
 #build the bot
 mkdir build
 cp res build/res
+cp account_conf.txt build/account_conf.txt
 cd build
 mkdir records
 cmake ..

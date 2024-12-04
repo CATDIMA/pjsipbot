@@ -3,7 +3,7 @@
 * git
 * gcc
 * cmake
-* openssl
+* libssl-dev
 
 # Настройка
 ### Настройка сборки

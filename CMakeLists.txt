@@ -46,4 +46,4 @@ target_link_libraries(${PROJECT_NAME} g7221codec-x86_64-unknown-linux-gnu)
 
 install(TARGETS ${PROJECT_NAME} DESTINATION bin)
 install(DIRECTORY res/ DESTINATION bin/res)
-install(FILES account_conf.txt DESTIANTION bin)
+install(FILES account_conf.txt DESTINATION bin)
