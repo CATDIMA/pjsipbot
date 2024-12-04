@@ -4,6 +4,7 @@
 * gcc
 * cmake
 * libssl-dev
+* uuid-dev
 
 # Настройка
 ### Настройка сборки
