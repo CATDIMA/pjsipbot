@@ -1,0 +1,7 @@
+transport_port=5060
+URI=sip:192.168.0.15
+regURI=sip:sip.pjsip.org
+scheme=digest
+realm=*
+username=test
+password=passwd
