@@ -6,6 +6,7 @@
 * libssl-dev
 * uuid-dev
 * swig
+* pkg-config
 
 # Настройка
 ### Настройка сборки
@@ -22,6 +23,11 @@ set(CMAKE_BUILD_TYPE Debug)
 Wav файлы для воспроизведения лежат в папке res
 
 # Сборка
+
+Проверит и доустановить пакеты (кроме git)
+```
+sudo ./check_packages.sh
+```
 
 Для сборки запустить _build.sh_
 ```

@@ -19,39 +19,21 @@ add_definitions(${PJSIP_CFLAGS})
 #Build type (Debug or Release)
 set(CMAKE_BUILD_TYPE Debug)
 
-include_directories(${PJSIP_INCLUDE_DIRS})
-link_directories(${PJSIP_LIBRARY_DIRS})
+target_include_directories(${PROJECT_NAME}
+        PUBLIC dep/pjsip/pjlib/include
+        PUBLIC dep/pjsip/pjlib-util/include
+        PUBLIC dep/pjsip/pjmedia/include
+        PUBLIC dep/pjsip/pjnath/include
+        PUBLIC dep/pjsip/pjsip/include)
 
-#target_include_directories(${PROJECT_NAME}
-#        PUBLIC dep/pjsip/pjlib/include
-#        PUBLIC dep/pjsip/pjlib-util/include
-#        PUBLIC dep/pjsip/pjmedia/include
-#        PUBLIC dep/pjsip/pjnath/include
-#        PUBLIC dep/pjsip/pjsip/include)
+target_link_directories(${PROJECT_NAME}
+        PUBLIC dep/pjsip/pjlib/lib
+        PUBLIC dep/pjsip/pjlib-util/lib
+        PUBLIC dep/pjsip/pjmedia/lib
+        PUBLIC dep/pjsip/pjnath/lib
+        PUBLIC dep/pjsip/pjsip/lib
+        PUBLIC dep/pjsip/third_party/lib)
 
-#target_link_directories(${PROJECT_NAME}
-#        PUBLIC dep/pjsip/pjlib/lib
-#        PUBLIC dep/pjsip/pjlib-util/lib
-#        PUBLIC dep/pjsip/pjmedia/lib
-#        PUBLIC dep/pjsip/pjnath/lib
-#        PUBLIC dep/pjsip/pjsip/lib
-#        PUBLIC dep/pjsip/third_party/lib)
-
-#target_link_libraries(${PROJECT_NAME} 
-#        stdc++
-#        pj-x86_64-unknown-linux-gnu
-#        pjlib-util-x86_64-unknown-linux-gnu
-#        pjnath-x86_64-unknown-linux-gnu
-#        pjmedia-x86_64-unknown-linux-gnu
-#        pjmedia-audiodev-x86_64-unknown-linux-gnu
-#        pjmedia-videodev-x86_64-unknown-linux-gnu
-#        pjmedia-codec-x86_64-unknown-linux-gnu
-#        pjsdp-x86_64-unknown-linux-gnu
-#        pjsip-x86_64-unknown-linux-gnu
-#        pjsip-simple-x86_64-unknown-linux-gnu
-#        pjsip-ua-x86_64-unknown-linux-gnu
-#        pjsua-x86_64-unknown-linux-gnu
-#        pjsua2-x86_64-unknown-linux-gnu)
 target_link_libraries(${PROJECT_NAME} ${PJSIP_LIBRARIES})
 target_link_libraries(${PROJECT_NAME} OpenSSL::SSL)
 target_link_libraries(${PROJECT_NAME} OpenSSL::Crypto)
